@@ -22,6 +22,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           image: caddy-cf
           tag_with_latest: true
-          tag: ${{ github.ref }}
+          tag: ${{ github.ref_name }}
           cache: true
           cache_registry: cache
