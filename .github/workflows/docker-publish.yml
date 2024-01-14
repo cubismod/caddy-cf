@@ -21,6 +21,5 @@ jobs:
           registry: ghcr.io
           password: ${{ secrets.GITHUB_TOKEN }}
           image: caddy-cf
-          tag_with_latest: true
           cache: true
           cache_registry: cache
