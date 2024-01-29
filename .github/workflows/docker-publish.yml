@@ -11,7 +11,7 @@ on:
   pull_request:
 
 jobs:
-  docker:
+  build-main:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -23,6 +23,10 @@ jobs:
           image: caddy-cf
           cache: true
           cache_registry: cache
+  build-proxy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
       - name: Kaniko build proxy
         uses: aevea/action-kaniko@master
         with:
