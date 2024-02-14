@@ -36,3 +36,5 @@ jobs:
           build_file: proxy.Dockerfile
           cache: true
           cache_registry: cache
+          tag: ${{ github.ref_name }}
+          tag_with_latest: true
