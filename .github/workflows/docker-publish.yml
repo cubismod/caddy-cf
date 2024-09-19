@@ -15,13 +15,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Kaniko build main
+      - name: Kaniko build Dockerfile
         uses: aevea/action-kaniko@master
         with:
           registry: ghcr.io
           password: ${{ secrets.GITHUB_TOKEN }}
           image: caddy-cf
           cache: true
+          build_file: Dockerfile
           cache_registry: cache
+          tag: ${{ github.ref_name }}
+          tag_with_latest: true
+      - name: Kaniko build security Dockerfile
+        uses: aevea/action-kaniko@master
+        with:
+          registry: ghcr.io
+          password: ${{ secrets.GITHUB_TOKEN }}
+          image: caddy-cf-security
+          cache: true
+          build_file: security.Dockerfile
+          cache_registry: cache-security
           tag: ${{ github.ref_name }}
           tag_with_latest: true
