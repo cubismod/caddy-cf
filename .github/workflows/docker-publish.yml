@@ -24,7 +24,7 @@ jobs:
           cache: true
           build_file: Dockerfile
           cache_registry: cache
-          tag: ${{ github.ref }}
+          tag: ${{ github.sha }}
           tag_with_latest: true
       - name: Kaniko build security Dockerfile
         uses: aevea/action-kaniko@master
@@ -35,5 +35,5 @@ jobs:
           cache: true
           build_file: security.Dockerfile
           cache_registry: cache-security
-          tag: ${{ github.ref }}
+          tag: ${{ github.sha }}
           tag_with_latest: true
