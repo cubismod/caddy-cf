@@ -2,6 +2,5 @@
 
 [![Docker Repository on Quay](https://quay.io/repository/cubismod/caddy-cf/status "Docker Repository on Quay")](https://quay.io/repository/cubismod/caddy-cf)
 
-Caddyfile image with the Cloudflare extension included
-from https://github.com/caddy-dns/cloudflare as well as
-https://github.com/caddyserver/cache-handler
+My **bespoke** build of Caddy including a few modules, see [Dockerfile](./Dockerfile).
+Named Cloudflare as it is focused around Cloudflare DNS based functionality.
