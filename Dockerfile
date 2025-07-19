@@ -6,7 +6,7 @@ RUN xcaddy build \
     --with github.com/tuzzmaniandevil/caddy-dynamic-clientip \
     --with github.com/monobilisim/caddy-ip-list
 
-FROM caddy:2.10.0-alpine@sha256:55ce1e7720af63164b96a8181cbf11dd64ea1bf1639852c5b5213344a5b204ae
+FROM caddy:2.10.0-alpine@sha256:ae4458638da8e1a91aafffb231c5f8778e964bca650c8a8cb23a7e8ac557aa3c
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
