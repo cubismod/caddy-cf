@@ -1,4 +1,4 @@
-FROM caddy:2.10-builder-alpine@sha256:6fe1c9dc798992b754e42e28d92aefb33372d38de74a6381c2b51cadf0244991 AS builder
+FROM caddy:2.10-builder-alpine@sha256:d314c56dec50dbddd6abf6ba7d8a3093705c2c23a26940a3525747924cc26022 AS builder
 
 RUN xcaddy build \
     --with github.com/lucaslorentz/caddy-docker-proxy/v2 \
