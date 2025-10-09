@@ -1,4 +1,4 @@
-FROM caddy:2.10.2-builder-alpine@sha256:a2bd1100fec0276f96598a4f46efecd4f2a822d5cec66c3a8f9384c7fe32c91d AS builder
+FROM caddy:2.10.2-builder-alpine@sha256:dbf2f10a5eb99f7ae6d35e2dc533091a221a8b9b4eb10fc83b3f5bab49067337 AS builder
 
 RUN xcaddy build \
     --with github.com/caddy-dns/cloudflare \
@@ -6,7 +6,7 @@ RUN xcaddy build \
     --with github.com/tuzzmaniandevil/caddy-dynamic-clientip \
     --with github.com/monobilisim/caddy-ip-list
 
-FROM caddy:2.10.2-alpine@sha256:f878dac093277bc6d5ac2baf3068664e4645905da770135b904b25ca85c7707e
+FROM caddy:2.10.2-alpine@sha256:7d75b1294f73048155757377c38f05621a65c8df4f261077aa3091c9168ea53a
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
