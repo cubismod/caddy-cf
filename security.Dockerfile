@@ -6,7 +6,7 @@ RUN xcaddy build \
     --with github.com/caddyserver/cache-handler \
     --with github.com/greenpau/caddy-security
 
-FROM caddy:2.11-alpine@sha256:9b0852043f1661d2513e447bb97870f3e56919e5daefb1786d87dfc90c4dc61b
+FROM caddy:2.11-alpine@sha256:da9e5fd32863242387e34dd330427b739564771fd602ca6a435c92e92f97172d
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
