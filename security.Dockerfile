@@ -1,4 +1,4 @@
-FROM caddy:2.11-builder-alpine@sha256:f84f4ef330a499d39b1a7a48355a0f795e75f01abc3d86238fdbd55a969abbea AS builder
+FROM caddy:2.11-builder-alpine@sha256:57ecaaed0eea06789c56aaa650e641aa9d63d4c2a32de0d935ce3517ea8f356d AS builder
 
 RUN xcaddy build \
     --with github.com/lucaslorentz/caddy-docker-proxy/v2 \
@@ -6,7 +6,7 @@ RUN xcaddy build \
     --with github.com/caddyserver/cache-handler \
     --with github.com/greenpau/caddy-security
 
-FROM caddy:2.11-alpine@sha256:b68d7750515c12d3b74b826b9375c5df0d4512891cdef6c10f588ac02b5a1d5e
+FROM caddy:2.11-alpine@sha256:3b2a0196e0687279c14c27adff9fc6b44acfa318dbb97eaebe385bdf99e5364c
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
