@@ -9,8 +9,8 @@ RUN xcaddy build \
 
 FROM caddy:2.11.2-alpine@sha256:834468128c7696cec0ceea6172f7d692daf645ae51983ca76e39da54a97c570d
 
-VOLUME /cache
-
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+
+RUN mkdir /nuts && chmod 700 /nuts
 
 LABEL maintainer="Ryan Wallace <git@hexa.mozmail.com>"
