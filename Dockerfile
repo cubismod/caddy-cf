@@ -5,7 +5,8 @@ RUN xcaddy build \
     --with github.com/caddyserver/cache-handler \
     --with github.com/tuzzmaniandevil/caddy-dynamic-clientip \
     --with github.com/monobilisim/caddy-ip-list \
-    --with github.com/darkweak/storages/nuts/caddy
+    --with github.com/darkweak/storages/nuts/caddy \
+    --with github.com/mholt/caddy-ratelimit
 
 FROM caddy:2.11.3-alpine@sha256:86deaf5e3d3408a6ccec08fbb79989783dd26e206ae10bcf78a801dc8c9ab794
 
